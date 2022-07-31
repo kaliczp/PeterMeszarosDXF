@@ -13,4 +13,12 @@ raw[644,]
 raw[raw[,1] == 4,]
 raw <- raw[-644,]
 
-unique(raw$Code)
+summary(factor(raw$Code))
+
+## Kód homogenizálás
+raw[raw$Code == "US", "Code"] <- "us"
+raw[raw$Code == "UT", "Code"] <- "ut"
+raw[raw$Code == "uk", "Code"] <- "ut"
+raw[raw$Code == "usz", "Code"] <- "us"
+
+Codes <- unique(raw$Code)
