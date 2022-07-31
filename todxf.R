@@ -13,3 +13,4 @@ raw[644,]
 raw[raw[,1] == 4,]
 raw <- raw[-644,]
 
+unique(raw$Code)
